@@ -49,6 +49,24 @@ ul {
     overflow: hidden;
 }
 
+a.skip-link:link,
+a.skip-link:visited {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #5DB7DE;
+    padding: 16px 0;
+    text-align: center;
+    color: #07020D;
+    translate: 0 -100%;
+    transition: translate ease-in 300ms;
+}
+
+a.skip-link:focus {
+    translate: 0;
+}
+
 /* ---------------- Header y Barra de Navegación ---------------- */
 header {
     background-color:var(--color-negro);
@@ -129,7 +147,21 @@ section {
 
 /* ---------------- Sección de Bienvenida ---------------- */
 #bienvenida {
-    margin: 25px auto 0;
+    margin: 25px auto 0; /* margen superior es de 25px, automático a la izquierda y a derecha, 0px abajo */
+    background-image: url('../img/bienvenida_sm.jpg');
+    height: 650px;
+    width: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bienvenida h1 {
+    background-color: #08020ebe;
+    color: #F1E9DB;
+    padding: 32px;
 }
 
 /* ---------------- Sección de Novedades ---------------- */
